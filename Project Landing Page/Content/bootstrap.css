@@ -86,6 +86,7 @@ sub {
 img {
   border: 0;
 }
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -6756,5 +6757,13 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+  .center-block{
+      color:red;
+      text-align:center;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
