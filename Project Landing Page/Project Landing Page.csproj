@@ -179,6 +179,8 @@
     <Content Include="images\services-image.jpg" />
     <Content Include="images\smile.png" />
     <Content Include="images\windmill.jpg" />
+    <Content Include="AppTemplate.html" />
+    <Content Include="NumberApp.html" />
     <Content Include="obj\Debug\Project Landing Page.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Project Landing Page.dll" />
     <Content Include="obj\Debug\Project Landing Page.pdb" />
@@ -452,10 +454,6 @@
     <Content Include="obj\Release\Project Landing Page.pdb" />
     <Content Include="obj\Release\_WPPLastBuildInfo.txt" />
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="contact.php" />
     <Content Include="portfolio\300x200.png" />
     <Content Include="portfolio\preview-300.png" />
@@ -804,7 +802,6 @@
     <Content Include="scripts\SyntaxHighlighter\shLegacy.js" />
     <Content Include="scripts\webfont.js" />
     <Content Include="Contact.html" />
-    <Content Include="services.html" />
     <Content Include="slider-images\1.jpg" />
     <Content Include="slider-images\2.jpg" />
     <Content Include="slider-images\4.jpg" />
