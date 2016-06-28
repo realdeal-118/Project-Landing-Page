@@ -1,0 +1,238 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Your Name - Simple</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Html5TemplatesDreamweaver.com">
+
+    <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link href="scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+        <link href="scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="scripts/icons/social/stylesheets/social_foundicons_ie7.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link rel="stylesheet" href="scripts/fontawesome/css/font-awesome.min.css">
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="scripts/fontawesome/css/font-awesome-ie7.min.css">
+    <![endif]-->
+
+    <link href="http://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
+
+    <link href="styles/custom.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .sampleborder {
+            border-style: solid;
+            border-color: #FF8E3F;
+            border-width: 5px;
+            padding-top: 10px;
+            padding-right: 5px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body id="pageBody">
+
+    <div id="divBoxed" class="container">
+
+        <div class="transparent-bg" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;zoom: 1;"></div>
+
+        <div class="divPanel notop nobottom">
+            <div class="row-fluid">
+                <div class="span12">
+
+                    <div id="divLogo" class="pull-left">
+                        <a href="index.html" id="divSiteTitle">Factorial App</a><br />
+                        <a href="index.html" id="divTagLine"></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="contentArea">
+
+            <div class="divPanel notop page-content">
+
+                <div class="breadcrumbs">
+                    <a href="portfolio.html">Return</a> &nbsp;/&nbsp; <span>Portfolio</span>
+                </div>
+
+                <br /><br />
+                <div class="row-fluid">
+                    <div class="row">
+                        <div class="span3 offset1">
+                            <div class="sampleborder">
+                                <!-- Button trigger modal -->
+                                <h3 style="color:#FF8E3F">Demo</h3>
+                                <hr />
+                               <p> Write a program that calculates the factorial of a number.
+                                The factorial of a non-negative integer n is the product
+                                of all positive integers less than or equal to n.</p>
+
+                                <p>(i.e.  5! = 5 x 4 x 3 x 2 x 1 = 120). </p>
+                               
+                                <a data-toggle="modal" href="#myModal2" class="btn btn-primary btn-lg">Launch Demo</a>
+                            </div>
+                        </div>
+                        <div class="span6 offset1">
+                            <div class="sampleborder">
+    <pre class="brush: js">                                
+function GetFactorial() {
+        var num = parseInt($("#n1").val());
+        var ans = 1;
+    while (num > 1) {
+        ans = ans * num--; 
+        //post decrement - very useful
+                 }
+    $("#result2").html(ans + " is the factorial number.");
+                 }
+                </pre>
+                                </div>
+
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--/End Main Content Area here-->
+            <!---------------------Begin Factorial Modal--------------------------->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title">Easy Factorial</h4>
+                        </div>
+
+                        <div class="modal-body col-sm-12">
+                            <div style="align-content:center">
+
+                                <!-- factorial description row on modal -->
+                                Write a program that calculates the factorial of a number.
+                                The factorial of a non-negative integer n is the product
+                                of all positive integers less than or equal to n.
+                                (i.e.  5! = 5 x 4 x 3 x 2 x 1 = 120). <p />
+                            </div>
+
+
+                            <div style="margin-left:2em">Insert factorial number</div>
+                            <div style="margin-left:2em">
+                                <div class="row col-sm-12">
+                                    <input type="text" id="n1" class="col-sm-6 well well-sm" value="5">
+
+                                    <div style="margin-left:2em">
+                                        <p id="result2"></p> <!--prints out results-->
+                                    </div>
+                                </div>
+                                <div style="margin-left:2em">
+                                    <div class="col-sm-6">
+                                        <div class="row col-sm-12">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="GetFactorial()" style="float: left;">Get Factorial</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal" style="float: right;">Close</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div>
+            <!---------------------End Factorial Modal--------------------------->
+
+
+
+
+
+
+            <div id="footerInnerSeparator"></div>
+
+
+
+            <div id="footerOuterSeparator"></div>
+
+            <div id="divFooter" class="footerArea">
+
+                <div class="divPanel">
+
+
+
+
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <p class="copyright">
+                                Copyright © 2013 Your Company. All Rights Reserved.
+                            </p>
+
+                            <p class="social_bookmarks">
+                                <a href="#"><i class="social foundicon-facebook"></i> Facebook</a>
+                                <a href=""><i class="social foundicon-twitter"></i> Twitter</a>
+                                <a href="#"><i class="social foundicon-pinterest"></i> Pinterest</a>
+                                <a href="#"><i class="social foundicon-rss"></i> Rss</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <script>
+                function GetFactorial() {
+                    var num = parseInt($("#n1").val());
+                    var ans = 1;
+                    while (num > 1) {
+                        ans = ans * num--; //allow the decrement in one line by using post algorithm
+                    }
+                    $("#result2").html(ans + " is the factorial number.");
+                }
+
+
+            </script>
+            <script src="scripts/SyntaxHighlighter/shCore.js"></script>
+            <script src="scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+
+            <script type="text/javascript">
+        SyntaxHighlighter.all()
+            </script>
+
+
+            <script src="scripts/jquery.min.js" type="text/javascript"></script>
+            <script src="scripts/jquery-1.8.2.min.js"></script>
+            <script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+            <script src="scripts/bootstrap.min.js"></script>
+            <script src="scripts/default.js" type="text/javascript"></script>
+
+            <script src="scripts/wookmark/js/jquery.wookmark.js" type="text/javascript"></script>
+            <script type="text/javascript">$(window).load(function () { var options = { autoResize: true, container: $('#gridArea'), offset: 10 }; var handler = $('#tiles li'); handler.wookmark(options); $('#tiles li').each(function () { var imgm = 0; if ($(this).find('img').length > 0) imgm = parseInt($(this).find('img').not('p img').css('margin-bottom')); var newHeight = $(this).find('img').height() + imgm + $(this).find('div').height() + $(this).find('h4').height() + $(this).find('p').not('blockquote p').height() + $(this).find('iframe').height() + $(this).find('blockquote').height() + 5; if ($(this).find('iframe').height()) newHeight = newHeight + 15; $(this).css('height', newHeight + 'px'); }); handler.wookmark(options); handler.wookmark(options); });</script>
+            <script src="scripts/yoxview/yox.js" type="text/javascript"></script>
+            <script src="scripts/yoxview/jquery.yoxview-2.21.js" type="text/javascript"></script>
+            <script type="text/javascript">$(document).ready(function () { $('.yoxview').yoxview({ autoHideInfo: false, renderInfoPin: false, backgroundColor: '#ffffff', backgroundOpacity: 0.8, infoBackColor: '#000000', infoBackOpacity: 1 }); $('.yoxview a img').hover(function () { $(this).animate({ opacity: 0.7 }, 300) }, function () { $(this).animate({ opacity: 1 }, 300) }); });</script>
+
+
+</body>
+</html>

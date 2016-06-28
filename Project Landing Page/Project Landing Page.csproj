@@ -140,6 +140,7 @@
     <Content Include="Content\SyntaxHighlighter\shThemeRDark.css" />
     <Content Include="email\index.php" />
     <Content Include="email\validation.js" />
+    <Content Include="Factorial.html" />
     <Content Include="images\2048.jpg" />
     <Content Include="images\5.jpg" />
     <Content Include="images\500px-33918005.jpg" />
@@ -455,6 +456,7 @@
     <Content Include="obj\Release\_WPPLastBuildInfo.txt" />
     <Content Include="packages.config" />
     <Content Include="contact.php" />
+    <Content Include="Palindrome.html" />
     <Content Include="portfolio\300x200.png" />
     <Content Include="portfolio\preview-300.png" />
     <Content Include="Properties\PublishProfiles\lfields - Web Deploy %282%29.pubxml.user" />

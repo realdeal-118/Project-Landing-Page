@@ -35,6 +35,19 @@
     <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
 
     <link href="styles/custom.css" rel="stylesheet" type="text/css" />
+
+    <style>
+ .sampleborder{
+        border-style:solid;
+        border-color:#FF8E3F;
+        border-width:5px;
+        padding-top: 10px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+    }
+
+    </style>
 </head>
 <body id="pageBody">
 
@@ -47,8 +60,8 @@
                 <div class="span12">
 
                     <div id="divLogo" class="pull-left">
-                        <a href="index.html" id="divSiteTitle">Leotis Fields</a><br />
-                        <a href="index.html" id="divTagLine">Making the World A Better Place With Web and Software Development </a>
+                        <a href="index.html" id="divSiteTitle">Numbers App</a><br />
+                        <a href="index.html" id="divTagLine"></a>
                     </div>
                 </div>
             </div>
@@ -61,31 +74,35 @@
             <div class="divPanel notop page-content">
 
                 <div class="breadcrumbs">
-                    <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Two Column</span>
+                    <a href="portfolio.html">Return</a> &nbsp;/&nbsp; <span>Portfolio</span>
                 </div>
 
-
+                <br /><br />
                 <div class="row-fluid">
                     <div class="row">
                         <div class="span3 offset1">
-                            <!-- Button trigger modal -->
-                            
-                            <ul>
-                                <li>Determine which number is the least</li>
-                                <li>Determine which number is the greatest</li>
-                                <li>Determine the mean of the numbers</li>
-                                <li>Determine the sum of all the numbers</li>
-                                <li>Determine the product of all the numbers</li>
-                            </ul>
-                            <input type="text" id="slot1" value="1"><br />
-                            <input type="text" id="slot2" class="col-sm-1 well well-xs" value="2"><br />
-                            <input type="text" id="slot3" class="col-sm-1 well well-xs" value="3"><br />
-                            <input type="text" id="slot4" class="col-sm-1 well well-xs" value="4"><br />
-                            <input type="text" id="slot5" class="col-xs-1 well well-xs" value="5">
-                            <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">Launch demo modal</a>
+                            <div class="sampleborder">
+                                <!-- Button trigger modal -->
+                                <h3 style="color:#FF8E3F" >Demo</h3>
+                                <hr />
+                                <ul>
+                                    <li>Determine which number is the least</li>
+                                    <li>Determine which number is the greatest</li>
+                                    <li>Determine the mean of the numbers</li>
+                                    <li>Determine the sum of all the numbers</li>
+                                    <li>Determine the product of all the numbers</li>
+                                </ul>
+                                <input type="text" id="slot1" value="1"><br />
+                                <input type="text" id="slot2" class="col-sm-1 well well-xs" value="2"><br />
+                                <input type="text" id="slot3" class="col-sm-1 well well-xs" value="3"><br />
+                                <input type="text" id="slot4" class="col-sm-1 well well-xs" value="4"><br />
+                                <input type="text" id="slot5" class="col-xs-1 well well-xs" value="5">
+                                <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">Launch Demo</a>
+                            </div>
                         </div>
-                        <div class="span6 offset2">
-                            <pre class="brush: js">
+                        <div class="span6 offset1"> 
+                            <div class="sampleborder">
+                                <pre class="brush: js">                                
 function GetMax() {
     var num = Math.max(parseInt($("#slot1").val()),
                        parseInt($("#slot2").val()),
@@ -127,8 +144,9 @@ function GetProduct() {
         $("#result").html(num + " is the max number.");
         }
                 </pre>
+                                </div>
 
-                        </div>
+                            </div>
 
                     </div>
                 </div>
@@ -276,6 +294,12 @@ function GetProduct() {
             $("#result").html(num + " is the max number.");
         }
 </script>
+            <script src="scripts/SyntaxHighlighter/shCore.js"></script>
+            <script src="scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+
+            <script type="text/javascript">
+        SyntaxHighlighter.all()
+            </script>
 
 
             <script src="scripts/jquery.min.js" type="text/javascript"></script>
