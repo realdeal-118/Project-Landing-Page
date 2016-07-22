@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -44,39 +44,59 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -86,6 +106,30 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -95,31 +139,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
-    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
-    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
-    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
-    <Content Include="bin\Microsoft.AI.Web.dll" />
-    <Content Include="bin\Microsoft.AI.Web.xml" />
-    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
-    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
-    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
-    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
-    <Content Include="bin\Project Landing Page.dll" />
-    <Content Include="bin\Project Landing Page.pdb" />
-    <Content Include="bin\roslyn\csc.exe" />
-    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
-    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
-    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
-    <Content Include="bin\roslyn\vbc.exe" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\Style.html" />
     <Content Include="Content\SyntaxHighlighter\shCore.css" />
     <Content Include="Content\SyntaxHighlighter\shCoreDefault.css" />
@@ -141,6 +164,8 @@
     <Content Include="email\index.php" />
     <Content Include="email\validation.js" />
     <Content Include="Factorial.html" />
+    <Content Include="FizzBuzz.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\2048.jpg" />
     <Content Include="images\5.jpg" />
     <Content Include="images\500px-33918005.jpg" />
@@ -182,278 +207,6 @@
     <Content Include="images\windmill.jpg" />
     <Content Include="AppTemplate.html" />
     <Content Include="NumberApp.html" />
-    <Content Include="obj\Debug\Project Landing Page.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\Project Landing Page.dll" />
-    <Content Include="obj\Debug\Project Landing Page.pdb" />
-    <Content Include="obj\Release\CSAutoParameterize.parameters.xml" />
-    <Content Include="obj\Release\Package\FilePreviewParameter.xml" />
-    <Content Include="obj\Release\Package\PackageTmp\about.html" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.Agent.Intercept.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.DependencyCollector.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.PerfCounterCollector.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.ServerTelemetryChannel.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.Web.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.WindowsServer.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.ApplicationInsights.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\Project Landing Page.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\csc.exe" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.Collections.Immutable.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.Reflection.Metadata.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe" />
-    <Content Include="obj\Release\Package\PackageTmp\Contact.html" />
-    <Content Include="obj\Release\Package\PackageTmp\contact.php" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap-theme.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap-theme.min.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap.min.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCore.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreDefault.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreDjango.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreEclipse.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreEmacs.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreFadeToGrey.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreMDUltra.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreMidnight.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreRDark.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeDefault.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeDjango.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeEclipse.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeEmacs.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeFadeToGrey.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeMDUltra.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeMidnight.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeRDark.css" />
-    <Content Include="obj\Release\Package\PackageTmp\email\index.php" />
-    <Content Include="obj\Release\Package\PackageTmp\email\validation.js" />
-    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\binary.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\Blue-global-technology-background-with-the-planet-Earth-map.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\building.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\calc.png" />
-    <Content Include="obj\Release\Package\PackageTmp\images\computer Sci.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\cyber-security-head-e1322420455324-600.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\exchange.png" />
-    <Content Include="obj\Release\Package\PackageTmp\images\factorial.png" />
-    <Content Include="obj\Release\Package\PackageTmp\images\images.png" />
-    <Content Include="obj\Release\Package\PackageTmp\images\leo.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\me afg.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\Me Military.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\meandmya.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\mind-uploading.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\myaandme.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\pay-937884_960_720.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\images\rocket.png" />
-    <Content Include="obj\Release\Package\PackageTmp\images\smile.png" />
-    <Content Include="obj\Release\Package\PackageTmp\images\tech1.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\index.html" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Debug\Project Landing Page.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Debug\Project Landing Page.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\CSAutoParameterize.parameters.xml" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\FilePreviewParameter.xml" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\about.html" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\Microsoft.AI.Agent.Intercept.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\Microsoft.AI.DependencyCollector.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\Microsoft.AI.PerfCounterCollector.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\Microsoft.AI.ServerTelemetryChannel.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\Microsoft.AI.Web.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\Microsoft.AI.WindowsServer.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\Microsoft.ApplicationInsights.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\Project Landing Page.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\csc.exe" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\System.Collections.Immutable.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\System.Reflection.Metadata.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Contact.html" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\contact.php" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\bootstrap-theme.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\bootstrap-theme.min.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\bootstrap.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\bootstrap.min.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCore.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreDefault.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreDjango.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreEclipse.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreEmacs.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreFadeToGrey.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreMDUltra.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreMidnight.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shCoreRDark.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeDefault.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeDjango.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeEclipse.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeEmacs.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeFadeToGrey.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeMDUltra.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeMidnight.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\SyntaxHighlighter\shThemeRDark.css" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\binary.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\Blue-global-technology-background-with-the-planet-Earth-map.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\building.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\calc.png" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\computer Sci.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\cyber-security-head-e1322420455324-600.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\exchange.png" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\factorial.png" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\images.png" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\leo.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\me afg.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\Me Military.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\meandmya.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\mind-uploading.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\myaandme.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\pay-937884_960_720.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\rocket.png" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\smile.png" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\images\tech1.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\index.html" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\portfolio.html" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Resume.html" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\ai.0.15.0-build58334.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\bootstrap.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\bootstrap.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\default.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\jquery-1.7.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\jquery-1.8.2.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\jquery-1.9.1.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\jquery-1.9.1.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\jquery.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shAutoloader.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushAppleScript.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushAS3.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushBash.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushColdFusion.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushCpp.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushCSharp.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushCss.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushDelphi.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushDiff.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushErlang.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushGroovy.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushJava.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushJavaFX.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushJScript.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPerl.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPhp.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPlain.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPowerShell.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPython.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushRuby.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushSass.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushScala.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushSql.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushVb.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushXml.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shCore.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shLegacy.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\webfont.js" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\services.html" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\Project Landing Page.SourceManifest.xml" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Project Landing Page.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Project Landing Page.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\_WPPLastBuildInfo.txt" />
-    <Content Include="obj\Release\Package\PackageTmp\portfolio.html" />
-    <Content Include="obj\Release\Package\PackageTmp\Properties\PublishProfiles\lfields - Web Deploy %282%29.pubxml.user" />
-    <Content Include="obj\Release\Package\PackageTmp\Properties\PublishProfiles\lfields - Web Deploy.pubxml.user" />
-    <Content Include="obj\Release\Package\PackageTmp\Resume.html" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\ai.0.15.0-build58334.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\bootstrap.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\bootstrap.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\default.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.7.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.8.2.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.9.1.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.9.1.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shAutoloader.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushAppleScript.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushAS3.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushBash.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushColdFusion.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushCpp.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushCSharp.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushCss.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushDelphi.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushDiff.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushErlang.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushGroovy.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushJava.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushJavaFX.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushJScript.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPerl.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPhp.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPlain.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPowerShell.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushPython.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushRuby.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushSass.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushScala.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushSql.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushVb.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shBrushXml.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shCore.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\SyntaxHighlighter\shLegacy.js" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\webfont.js" />
-    <Content Include="obj\Release\Package\PackageTmp\services.html" />
-    <Content Include="obj\Release\Package\PackageTmp\slider-images\1.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\slider-images\2.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\slider-images\4.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\chruch.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\custom.css" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\dark_mosaic.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\dark_mosaic_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\escheresque_ste_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\extra_clean_paper_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\light_honeycomb_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\norwegian_rose.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\norwegian_rose_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\readme.txt" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\scribble_light.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\small-crackle-bright.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\small-crackle-bright_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\soft_kill.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\soft_kill_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\tactile_noise.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\tactile_noise_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\image.gif" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\image1.gif" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\image2.gif" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\image3.gif" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\image4.gif" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\image5.gif" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\image6.gif" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\image7.gif" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\image8.gif" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\orange_350.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\thumbs\orange_800.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\triangles.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\triangles_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\white_wall_hash.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\wood_1.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\xv.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\__MACOSX\dark_mosaic\._dark_mosaic_%402X.png" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\__MACOSX\dark_mosaic\._readme.txt" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\__MACOSX\tactile_noise\._readme.txt" />
-    <Content Include="obj\Release\Package\PackageTmp\styles\__MACOSX\tactile_noise\._tactile_noise_%402X.png" />
-    <Content Include="obj\Release\Package\Project Landing Page.SourceManifest.xml" />
-    <Content Include="obj\Release\Project Landing Page.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Release\Project Landing Page.dll" />
-    <Content Include="obj\Release\Project Landing Page.pdb" />
-    <Content Include="obj\Release\_WPPLastBuildInfo.txt" />
     <Content Include="packages.config" />
     <Content Include="contact.php" />
     <Content Include="Palindrome.html" />
@@ -462,6 +215,8 @@
     <Content Include="Properties\PublishProfiles\lfields - Web Deploy %282%29.pubxml.user" />
     <Content Include="Properties\PublishProfiles\lfields - Web Deploy.pubxml.user" />
     <Content Include="Resume.html" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\bootstrap\css\bootstrap-responsive.css" />
     <Content Include="scripts\bootstrap\css\bootstrap-responsive.min.css" />
     <Content Include="scripts\bootstrap\css\bootstrap.css" />
@@ -501,81 +256,29 @@
     <Content Include="scripts\icons\social\fonts\social_foundicons.svg" />
     <Content Include="scripts\icons\social\stylesheets\social_foundicons.css" />
     <Content Include="scripts\icons\social\stylesheets\social_foundicons_ie7.css" />
-    <Content Include="scripts\jquery-1.9.1.min.map" />
     <Content Include="portfolio\Leotis Fields Resume.docx" />
     <Content Include="portfolio\Leotis Fields Resume.pdf" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Release\CSAutoParameterize\original\Web.config" />
-    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Release\Package\PackageTmp\ApplicationInsights.config" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\ApplicationInsights.config" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap-theme.css.map" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap-theme.min.css.map" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap.css.map" />
-    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap.min.css.map" />
-    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="obj\Release\Package\PackageTmp\packages.config" />
-    <Content Include="obj\Release\Package\PackageTmp\portfolio\Leotis Fields Resume.docx" />
-    <Content Include="obj\Release\Package\PackageTmp\portfolio\Leotis Fields Resume.pdf" />
-    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.9.1.min.map" />
-    <Content Include="obj\Release\Package\PackageTmp\Service References\Application Insights\ConnectedService.json" />
-    <Content Include="obj\Release\Package\PackageTmp\Web.config" />
-    <Content Include="obj\Release\Project Landing Page.csprojResolveAssemblyReference.cache" />
-    <Content Include="obj\Release\TransformWebConfig\assist\Web.config" />
-    <Content Include="obj\Release\TransformWebConfig\original\Web.config" />
-    <Content Include="obj\Release\TransformWebConfig\transformed\Web.config" />
-    <Content Include="bin\ApplicationInsights.config" />
-    <Content Include="bin\Project Landing Page.dll.config" />
-    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="obj\Release\CSAutoParameterize\original\obj\Release\CSAutoParameterize\original\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\original\obj\Release\CSAutoParameterize\transformed\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\original\obj\Release\Package\PackageTmp\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\original\obj\Release\TransformWebConfig\assist\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\original\obj\Release\TransformWebConfig\original\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\original\obj\Release\TransformWebConfig\transformed\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\transformed\obj\Release\CSAutoParameterize\original\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\transformed\obj\Release\Package\PackageTmp\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\transformed\obj\Release\TransformWebConfig\assist\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\transformed\obj\Release\TransformWebConfig\original\Web.config" />
-    <Content Include="obj\Release\CSAutoParameterize\transformed\obj\Release\TransformWebConfig\transformed\Web.config" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\CSAutoParameterize\original\Web.config" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\ApplicationInsights.config" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\ApplicationInsights.config" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\bootstrap-theme.css.map" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\bootstrap-theme.min.css.map" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\bootstrap.css.map" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Content\bootstrap.min.css.map" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\packages.config" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\portfolio\Leotis Fields Resume.docx" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\portfolio\Leotis Fields Resume.pdf" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\scripts\jquery-1.9.1.min.map" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Service References\Application Insights\ConnectedService.json" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Package\PackageTmp\Web.config" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\Project Landing Page.csprojResolveAssemblyReference.cache" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\TransformWebConfig\assist\Web.config" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\TransformWebConfig\original\Web.config" />
-    <Content Include="obj\Release\Package\PackageTmp\obj\Release\TransformWebConfig\transformed\Web.config" />
-    <None Include="obj\Release\__TestProfilesForFilePreview__\lfields - Web Deploy %282%29.pubxml" />
     <Content Include="private.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\templates\WelcomeEmail.cshtml" />
     <None Include="Properties\PublishProfiles\lfields - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\lfields - Web Deploy %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\lfields - Web Deploy.pubxml" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <None Include="scripts\jquery-3.0.0.intellisense.js" />
+    <Content Include="scripts\jquery-3.0.0.js" />
+    <Content Include="scripts\jquery-3.0.0.min.js" />
+    <Content Include="scripts\jquery-3.0.0.slim.js" />
+    <Content Include="scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="scripts\prettyphoto\css\prettyPhoto.css" />
     <Content Include="scripts\prettyphoto\images\fullscreen\high.gif" />
     <Content Include="scripts\prettyphoto\images\fullscreen\huge.gif" />
@@ -736,6 +439,11 @@
     <Content Include="scripts\fontawesome\font\proximanova-webfont.eot" />
     <Content Include="scripts\fontawesome\font\proximanova-webfont.ttf" />
     <Content Include="scripts\fontawesome\README.md" />
+    <Content Include="scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="scripts\jquery-3.0.0.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="portfolio\Leotis Fields 2016 Resume %281%29.docx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -745,11 +453,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\building.jpg" />
     <Content Include="images\mind-uploading.jpg" />
     <Content Include="images\tech1.jpg" />
@@ -757,22 +461,9 @@
     <Content Include="portfolio.html" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="scripts\bootstrap.js" />
-    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\default.js" />
     <Content Include="scripts\jquery-1.7.min.js" />
     <Content Include="scripts\jquery-1.8.2.min.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="scripts\jquery-1.9.1.js" />
-    <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\SyntaxHighlighter\shAutoloader.js" />
     <Content Include="scripts\SyntaxHighlighter\shBrushAppleScript.js" />
@@ -849,22 +540,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="obj\Debug\__testMsDeployConnection__\" />
-    <Folder Include="obj\Release\CSAutoParameterize\transformed\obj\Release\CSAutoParameterize\transformed\" />
-    <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\" />
-    <Folder Include="obj\Release\TempPE\" />
-    <Folder Include="obj\Release\__testMsDeployConnection__\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
@@ -897,8 +575,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -46,6 +46,12 @@
             padding-bottom: 10px;
             padding-left: 5px;
         }
+        #fizzbuzz{
+            height:100px;
+            max-height:100px;
+            width:100px;
+            max-width:100px;
+        }
     </style>
 </head>
 <body id="pageBody">
@@ -59,7 +65,7 @@
                 <div class="span12">
 
                     <div id="divLogo" class="pull-left">
-                        <a href="index.html" id="divSiteTitle">Palindrome App</a><br />
+                        <a href="index.html" id="divSiteTitle">FizzBuzz App</a><br />
                         <a href="index.html" id="divTagLine"></a>
                     </div>
                 </div>
@@ -84,35 +90,40 @@
                                 <!-- Button trigger modal -->
                                 <h3 style="color:#FF8E3F">Demo</h3>
                                 <hr />
-                                <p>A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward.</p>
-                                <p>Please enter a word to find if it is a Palindrome.</p>
+                                <p>Please Enter 2 numbers between 1 - 100.</p>
                                 
 
-                                
 
-                                <a data-toggle="modal" href="#myModal3" class="btn btn-primary btn-lg">Launch Demo</a>
+
+
+                                <a data-toggle="modal" href="#myModal4" class="btn btn-primary btn-lg">Launch Demo</a>
                             </div>
                         </div>
                         <div class="span6 offset1">
                             <div class="sampleborder">
-                                <pre class="brush: js">                                
-function GetPalindrome() {
-         revString = "";
-         inptString = ($("#palindrome").val());
-j = inptString.length;
-    for (var j; j >= 0; j--) {
-        revString = revString + inptString.charAt(j);
+                                <pre class="brush: js">                               
+function GetFizzBuzz() {
+    var j = parseInt($("#fizzbuzz1").val());;
+    var k = parseInt($("#fizzbuzz2").val());;
+for (var i = 1; i <= 100; i++) {
+    if (i % j == 0 && i % k == 0) {
+        result4.innerHTML += "FizzBuzz";
                 }
-    if (inptString === revString) {
-       $("#result3").html(inptString + " is a Palindrome.");
+    else if (i % j == 0) {
+         result4.innerHTML += "Fizz";
                 }
-   else {
-        $("#result3").html(inptString + " is not a Palindrome.");
+    else if (i % k == 0) {
+         result4.innerHTML += "Buzz";
                 }
+    else {
+         result4.innerHTML += i;
+                }
+   result4.innerHTML += "<br>";
+            }
+        }
                 </pre>
                                 </div>
-
-                                </div>
+                            </div>
 
                     </div>
                 </div>
@@ -120,50 +131,55 @@ j = inptString.length;
 
 
 
-            <!---------------------Begin Palindrome Modal--------------------------->
-            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <!---------------------Begin Fizz Buzz Modal--------------------------->
+            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4 class="modal-title">Palindrome</h4>
+                            <h4 class="modal-title">Fizz Buzz</h4>
                         </div>
                         <div class="modal-body col-sm-12">
                             <div style="align-content:center">
                                 <!-- Instruction for user -->
-                                
-                                <p>Please enter a word to find if it is a Palindrome.</p>
+                                <p>Please Enter 2 numbers between 1 - 100.</p>
                             </div>
-                            <div style="margin-left:2em">Enter a word </div>
+                            <div style="margin-left:2em"></div>
                             <div style="margin-left:2em">
                                 <div class="row col-sm-12">
-                                    <input type="text" id="palindrome" class="col-sm-6 well well-sm" value="">
+                                    <input type="text" id="fizzbuzz1" class="col-sm-6 well well-sm" value="5">
+                                    <input type="text" id="fizzbuzz2" class="col-sm-6 well well-sm" value="5">
                                     <div style="margin-left:2em">
-                                        <p id="result3"></p> <!--prints out results-->
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div style="margin-left:2em">
-                                    <div class="col-sm-6">
-                                        <div class="row col-sm-12">
+                                
+                                    
+                                        <div class="container-fluid"id="fizzbuzz">
+                                            <div class="row">
+                                               
+                                                    <div class="span3" id="result4"></div> <!--prints out results-->
+                                                
                                             
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" onclick="GetPalindrome()" style="float: left;">Get Palindrome</button>
+                                <button type="button" class="btn btn-primary" onclick="GetFizzBuzz()" style="float: left;">Get FizzBuzz</button>
                                 <button type="button" class="btn btn-danger" data-dismiss="modal" style="float: right;">Close</button>
                             </div>
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
             </div>
-            <!---------------------End Palindrome Modal--------------------------->
-
-
-
-
-
+            <!---------------------End Fizz Buzz Modal--------------------------->
 
             <div id="footerInnerSeparator"></div>
 
@@ -198,21 +214,38 @@ j = inptString.length;
 
 
             <script>
-                function GetPalindrome() {
-                    revString = "";
-                    inptString = ($("#palindrome").val());
-                    j = inptString.length;
-                    for (var j; j >= 0; j--) {
-                        revString = revString + inptString.charAt(j);
+                function GetFizzBuzz() {
+                    var j = parseInt($("#fizzbuzz1").val());;
+                    var k = parseInt($("#fizzbuzz2").val());;
+
+
+                    for (var i = 1; i <= 100; i++) {
+
+                        if (i % j == 0 && i % k == 0) {
+
+                            result4.innerHTML += "FizzBuzz";
+                        }
+                        else if (i % j == 0) {
+                            result4.innerHTML += "Fizz";
+                        }
+                        else if (i % k == 0) {
+                            result4.innerHTML += "Buzz";
+                        }
+                        else {
+                            result4.innerHTML += i;
+                        }
+                        result4.innerHTML += "<br>";
                     }
 
-                    if (inptString === revString) {
-                        $("#result3").html(inptString + " is a Palindrome.");
-                    }
-                    else {
-                        $("#result3").html(inptString + " is not a Palindrome.");
-                    }
                 }
+
+
+
+                $('.modal ').on('show.bs.modal', function () {
+                    $('.modal .modal-body').css('overflow-y', 'auto');
+                    $('.modal .modal-body').css('max-height', $(window).height() * 0.6);
+                });
+
 
 
 
