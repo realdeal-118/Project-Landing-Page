@@ -256,8 +256,6 @@
     <Content Include="scripts\icons\social\fonts\social_foundicons.svg" />
     <Content Include="scripts\icons\social\stylesheets\social_foundicons.css" />
     <Content Include="scripts\icons\social\stylesheets\social_foundicons_ie7.css" />
-    <Content Include="portfolio\Leotis Fields Resume.docx" />
-    <Content Include="portfolio\Leotis Fields Resume.pdf" />
     <Content Include="private.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -266,6 +264,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\templates\WelcomeEmail.cshtml" />
+    <Content Include="portfolio\Leotis Fields 2016 Resume %281%29.pdf" />
     <None Include="Properties\PublishProfiles\lfields - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\lfields - Web Deploy %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\lfields - Web Deploy.pubxml" />
@@ -443,7 +442,6 @@
     <Content Include="scripts\jquery-3.0.0.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="portfolio\Leotis Fields 2016 Resume %281%29.docx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
